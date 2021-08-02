@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+     implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.0.1'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.1.0'
+     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.0.8'
+
+
+}
+
+test {
+    useTestNG()
+}
+test {
+    useJUnitPlatform()
+}
